@@ -6,14 +6,14 @@ from . import strategy
 from . import output
 from . import results
 from . import solved
-from ..par import apply
-from ..bar import SolvedBar
-from .. import log, human
+from ..tools.par import apply
+from ..tools.bar import SolvedBar
+from ..tools import log, human
 
 logger = logging.getLogger(__name__)
 
 def prove1(prover, problem, f_problem, strat, f_out):
-   result = prover.prove(f_problem, strat, f_out=f_out)
+   result = prover.solve(f_problem, strat, f_out=f_out)
    return (problem, result)
 
 def eval1(prover, bid, sid, cores, options=[], label="[*]", **others):

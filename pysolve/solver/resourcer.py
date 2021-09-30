@@ -36,7 +36,7 @@ class Resourcer(Solver):
 
    def cmd(self, problem, strategy, **others):
       cmdargs = f"{self.cmd_timeout}{self.binary} {self.args} {self.cmd_limits} {strategy} {problem}"
-      print(cmdargs)
+      #print(cmdargs)
       return cmdargs
 
    def timeout(self):
